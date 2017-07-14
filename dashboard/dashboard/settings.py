@@ -25,7 +25,7 @@ SECRET_KEY = 'mt6e-z99ckk@$!5a9k8u46!)zgj+f3ze-v(kt_coxior!7s%uw'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.20.127', 'bis-wk-pt01']
+ALLOWED_HOSTS = ['192.168.20.127', 'bis-wk-pt01', '127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -54,7 +54,7 @@ ROOT_URLCONF = 'dashboard.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['gm_dash/html/auth'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -62,6 +62,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                #'django.core.context_processors.csrf',
             ],
         },
     },
